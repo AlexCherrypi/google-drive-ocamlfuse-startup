@@ -1,0 +1,9 @@
+[Unit]
+Description=Management of all google-drive-ocamlfuse services
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/google-drive-ocamlfuse-startup.sh
+
+[Install]
+WantedBy=default.target

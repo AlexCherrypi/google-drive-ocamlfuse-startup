@@ -6,10 +6,10 @@ if [[ "$EUID" -ne 0 ]]; then
 fi
 
 sudo apt update && \
-sudo apt install software-properties-common && \
+sudo apt install software-properties-common wget && \
 sudo add-apt-repository ppa:alessandro-strada/ppa && \
 sudo apt update && \
-sudo apt install google-drive-ocamlfuse wget && \
+sudo apt install google-drive-ocamlfuse && \
 sudo mkdir -p /usr/local/bin && \
 cd /usr/local/bin && \
 sudo wget https://raw.githubusercontent.com/Knallbertlp/google-drive-ocamlfuse-startup/master/google-drive-ocamlfuse-startup.sh -O google-drive-ocamlfuse-startup.sh && \

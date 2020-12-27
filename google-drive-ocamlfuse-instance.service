@@ -1,0 +1,12 @@
+[Unit]
+Description=Instance of google-drive-ocamlfuse for the account with the label LABEL
+After=network.target
+
+[Service]
+ExecStart=google-drive-ocamlfuse -label LABEL nonempty "DIR"
+ExecStop=fusermount -u "DIR"
+Restart=always
+Type=forking
+
+[Install]
+WantedBy=default.target

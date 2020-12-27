@@ -7,7 +7,7 @@ fi
 
 sudo apt update && \
 sudo apt install software-properties-common wget && \
-sudo add-apt-repository ppa:alessandro-strada/ppa && \
+sudo add-apt-repository ppa:alessandro-strada/ppa -y && \
 sudo apt update && \
 sudo apt install google-drive-ocamlfuse && \
 sudo mkdir -p /usr/local/bin && \

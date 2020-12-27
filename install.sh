@@ -13,10 +13,10 @@ sudo apt install google-drive-ocamlfuse && \
 sudo mkdir -p /usr/local/bin && \
 cd /usr/local/bin && \
 sudo wget https://raw.githubusercontent.com/Knallbertlp/google-drive-ocamlfuse-startup/master/google-drive-ocamlfuse-startup.sh -O google-drive-ocamlfuse-startup.sh && \
-chmod 0755 google-drive-ocamlfuse-startup.sh && \
+sudo chmod 0755 google-drive-ocamlfuse-startup.sh && \
 sudo mkdir -p /etc/systemd/user/ && \
 cd /etc/systemd/user/ && \
 sudo wget https://raw.githubusercontent.com/Knallbertlp/google-drive-ocamlfuse-startup/master/google-drive-ocamlfuse-startup.service -O google-drive-ocamlfuse-startup.service && \
-chmod 0644 google-drive-ocamlfuse-startup.service && \
+sudo chmod 0644 google-drive-ocamlfuse-startup.service && \
 sudo systemctl enable google-drive-ocamlfuse-startup.service && \
 sudo systemctl start google-drive-ocamlfuse-startup.service

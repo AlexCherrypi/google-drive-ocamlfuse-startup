@@ -12,7 +12,7 @@ if [ ! -d ~/.gdfuse ]; then
 fi
 for file in ~/.gdfuse/*/  ; do
   local LABEL
-  LABEL="$(basename $file)"
+  LABEL=$(basename "$file")
   local DIR
   DIR=$(eval echo "~/Google Drive/Google Drive $LABEL")
   echo $DIR

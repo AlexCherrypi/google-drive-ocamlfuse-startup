@@ -15,6 +15,7 @@ for file in ~/.gdfuse/*/  ; do
   LABEL="$(basename $file)"
   local DIR
   DIR="~/Google Drive/Google Drive $LABEL"
+  echo $DIR
   local SERVICE
   SERVICE="google-drive-ocamlfuse-instance-$LABEL.service"
   unset file

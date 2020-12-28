@@ -1,4 +1,10 @@
 #!/bin/bash
+
+if [ ! $(id -u) -ge 1000 ] && [ ! $(id -u) -le 59999 ]; then
+  systemctl --user disable google-drive-ocamlfuse-startup.service
+  systemctl --user stop google-drive-ocamlfuse-startup.service
+  exit 0
+fi
 mkdir -p ~/Google\ Drive/
 cd ~
 if [ -d "~/.gdfuse" ]; then

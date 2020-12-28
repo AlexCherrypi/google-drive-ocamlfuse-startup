@@ -19,5 +19,5 @@ cd /etc/systemd/user/ && \
 sudo wget https://raw.githubusercontent.com/Knallbertlp/google-drive-ocamlfuse-startup/master/google-drive-ocamlfuse-startup.service -O google-drive-ocamlfuse-startup.service && \
 sudo chmod 0644 google-drive-ocamlfuse-startup.service && \
 sudo systemctl --global enable google-drive-ocamlfuse-startup.service && \
-sleep 1
+sleep 1 && \
 systemctl --user start google-drive-ocamlfuse-startup.service

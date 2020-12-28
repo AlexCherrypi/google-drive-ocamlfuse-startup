@@ -29,7 +29,6 @@ for file in ~/.gdfuse/*/  ; do
     sed -i "s~LABEL~$LABEL~g" "$SERVICE"
     sed -i "s~DIR~$DIR~g" "$SERVICE"
     systemctl --user enable "$SERVICE"
-    sleep 1
     systemctl --user start "$SERVICE"
   fi
 done

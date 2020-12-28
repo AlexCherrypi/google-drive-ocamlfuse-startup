@@ -15,7 +15,6 @@ for file in ~/.gdfuse/*/  ; do
   LABEL=$(basename "$file")
   local DIR
   DIR=$(eval echo "~/Google Drive/Google Drive $LABEL")
-  echo $DIR
   local SERVICE
   SERVICE="google-drive-ocamlfuse-instance-$LABEL.service"
   unset file
@@ -32,4 +31,12 @@ for file in ~/.gdfuse/*/  ; do
     systemctl --user start "$SERVICE"
   fi
 done
-
+unset folder
+for folder in ~/Google\ Drive/*/  ; do
+  if [ ! -d ~/.gdfuse/$(basename "$folder" | grep -Po '(?<=Google Drive )[^/]+/?$') ]; then
+  fusermount -u "$folder"
+  #rm -r "$folder"
+  rm -d "$folder"
+  fi
+done
+unset folder

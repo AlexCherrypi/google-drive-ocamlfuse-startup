@@ -1,9 +1,12 @@
 [Unit]
 Description=Management of all google-drive-ocamlfuse services
+Wants=network-online.target
+After=network-online.target
 
 [Service]
-Type=simple
+Type=oneshot
 ExecStart=/usr/local/bin/google-drive-ocamlfuse-startup.sh
+RemainAfterExit=yes
 
 [Install]
 WantedBy=default.target

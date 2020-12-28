@@ -7,7 +7,7 @@ if [ ! $(id -u) -ge 1000 ] && [ ! $(id -u) -le 59999 ]; then
 fi
 mkdir -p ~/Google\ Drive/
 cd ~
-if [ -d "~/.gdfuse" ]; then
+if [ ! -d $(eval echo "~/.gdfuse") ]; then
   exit 1
 fi
 for file in ~/.gdfuse/*/  ; do

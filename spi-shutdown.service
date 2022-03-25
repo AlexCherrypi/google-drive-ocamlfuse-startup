@@ -1,0 +1,12 @@
+[Unit]
+Description=poweroff spi
+DefaultDependencies=no
+Before=shutdown.target poweroff.target halt.target
+
+[Service]
+Type=oneshot
+ExecStart=/etc/spi.d/spi-poweroff.sh 
+TimeoutStartSec=0
+
+[Install]
+WantedBy=shutdown.target poweroff.target halt.target
